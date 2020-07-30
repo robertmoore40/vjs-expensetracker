@@ -1,28 +1,27 @@
 const localStorageTransactions = JSON.parse(
-  localStorage.getItem('transactions')
+  localStorage.getItem("transactions")
 );
 
 let transactions =
-  localStorage.getItem('transactions') !== null ? localStorageTransactions : [];
+  localStorage.getItem("transactions") !== null ? localStorageTransactions : [];
 
 
-// Remove transaction by ID
 function removeTransaction(id) {
-    transactions = transactions.filter(transaction => transaction.id !== id);
-  
-    updateLocalStorage();
-  
-    init();
-  }
+  transactions = transactions.filter((transaction) => transaction.id !== id);
 
-  function updateLocalStorage() {
-    localStorage.setItem('transactions', JSON.stringify(transactions));
-  }
+  updateLocalStorage();
 
-// App start
+  init();
+}
+
+function updateLocalStorage() {
+  localStorage.setItem("transactions", JSON.stringify(transactions));
+}
+
+
 function init() {
-    list.innerHTML = '';
-  
-    transactions.forEach(addTransactionDOM);
-    updateValues();
-  }
+  list.innerHTML = "";
+
+  transactions.forEach(addTransactionDOM);
+  updateValues();
+}
