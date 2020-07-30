@@ -15,6 +15,10 @@ function removeTransaction(id) {
     init();
   }
 
+  function updateLocalStorage() {
+    localStorage.setItem('transactions', JSON.stringify(transactions));
+  }
+
 // App start
 function init() {
     list.innerHTML = '';
