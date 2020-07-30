@@ -4,3 +4,12 @@ const localStorageTransactions = JSON.parse(
 
 let transactions =
   localStorage.getItem('transactions') !== null ? localStorageTransactions : [];
+
+
+// App start
+function init() {
+    list.innerHTML = '';
+  
+    transactions.forEach(addTransactionDOM);
+    updateValues();
+  }
