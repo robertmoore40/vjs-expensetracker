@@ -99,3 +99,10 @@ let transactions =
   function updateLocalStorage() {
     localStorage.setItem('transactions', JSON.stringify(transactions));
   }
+
+  function init() {
+    list.innerHTML = '';
+  
+    transactions.forEach(addTransactionDOM);
+    updateValues();
+  }
