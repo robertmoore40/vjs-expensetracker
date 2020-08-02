@@ -86,3 +86,12 @@ let transactions =
     money_plus.innerText = `$${income}`;
     money_minus.innerText = `$${expense}`;
   }
+
+
+  function removeTransaction(id) {
+    transactions = transactions.filter(transaction => transaction.id !== id);
+  
+    updateLocalStorage();
+  
+    init();
+  }
