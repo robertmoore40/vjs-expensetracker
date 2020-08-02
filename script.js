@@ -95,3 +95,7 @@ let transactions =
   
     init();
   }
+
+  function updateLocalStorage() {
+    localStorage.setItem('transactions', JSON.stringify(transactions));
+  }
