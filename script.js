@@ -1,27 +1,12 @@
+  
+const balance = document.getElementById('balance');
+const money_plus = document.getElementById('money-plus');
+const money_minus = document.getElementById('money-minus');
+const list = document.getElementById('list');
+const form = document.getElementById('form');
+const text = document.getElementById('text');
+const amount = document.getElementById('amount');
+
 const localStorageTransactions = JSON.parse(
-  localStorage.getItem("transactions")
+  localStorage.getItem('transactions')
 );
-
-let transactions =
-  localStorage.getItem("transactions") !== null ? localStorageTransactions : [];
-
-
-function removeTransaction(id) {
-  transactions = transactions.filter((transaction) => transaction.id !== id);
-
-  updateLocalStorage();
-
-  init();
-}
-
-function updateLocalStorage() {
-  localStorage.setItem("transactions", JSON.stringify(transactions));
-}
-
-
-function init() {
-  list.innerHTML = "";
-
-  transactions.forEach(addTransactionDOM);
-  updateValues();
-}
