@@ -45,3 +45,5 @@ let transactions =
   function generateID() {
     return Math.floor(Math.random() * 100000000);
   }
+
+  // generates a unique ID
