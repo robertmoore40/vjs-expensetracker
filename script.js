@@ -106,3 +106,5 @@ let transactions =
     transactions.forEach(addTransactionDOM);
     updateValues();
   }
+
+  init();
