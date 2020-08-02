@@ -108,3 +108,5 @@ let transactions =
   }
 
   init();
+
+  form.addEventListener('submit', addTransaction);
